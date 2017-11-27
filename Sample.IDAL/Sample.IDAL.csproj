@@ -44,6 +44,7 @@
     <Compile Include="IBaseDAL.cs" />
     <Compile Include="ICategoryDAL.cs" />
     <Compile Include="ICommentDAL.cs" />
+    <Compile Include="IDbSession.cs" />
     <Compile Include="IHeadIconDAL.cs" />
     <Compile Include="ILeaveMsgDAL.cs" />
     <Compile Include="IPalLinkDAL.cs" />

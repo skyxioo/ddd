@@ -48,9 +48,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArticleDAL.cs" />
     <Compile Include="BaseDAL.cs" />
     <Compile Include="BlogDbContext.cs" />
+    <Compile Include="CategoryDAL.cs" />
+    <Compile Include="CommentDAL.cs" />
+    <Compile Include="DbSession.cs" />
+    <Compile Include="HeadIconDAL.cs" />
+    <Compile Include="LeaveMsgDAL.cs" />
+    <Compile Include="PalLinkDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchDetailDAL.cs" />
+    <Compile Include="SearchRankDAL.cs" />
+    <Compile Include="StaticFileDAL.cs" />
+    <Compile Include="VisitorDAL.cs" />
+    <Compile Include="WebSettingDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
