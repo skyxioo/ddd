@@ -40,7 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IArticleDAL.cs" />
     <Compile Include="IBaseDAL.cs" />
+    <Compile Include="ICategoryDAL.cs" />
+    <Compile Include="ICommentDAL.cs" />
+    <Compile Include="IHeadIconDAL.cs" />
+    <Compile Include="ILeaveMsgDAL.cs" />
+    <Compile Include="IPalLinkDAL.cs" />
+    <Compile Include="ISearchDetailDAL.cs" />
+    <Compile Include="ISearchRankDAL.cs" />
+    <Compile Include="IStaticFileDAL.cs" />
+    <Compile Include="IVisitorDAL.cs" />
+    <Compile Include="IWebSettingDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
