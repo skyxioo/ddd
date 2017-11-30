@@ -16,13 +16,12 @@ namespace Sample.DAL
     {
         public BaseDAL()
         {
-            //SetDbContext();
-            _dbContext = new BlogDbContext();
+            SetDbContext();
         }
 
-        //public abstract void SetDbContext();
+        public abstract void SetDbContext();
 
-        private DbContext _dbContext;
+        protected DbContext _dbContext;
 
         public int Add(T model)
         {

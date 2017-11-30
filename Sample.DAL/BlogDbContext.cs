@@ -12,7 +12,7 @@ namespace Sample.DAL
     {
         public BlogDbContext() : base("name=BlogDb4ZynEntities")
         {
-
+            Configuration.ValidateOnSaveEnabled = false;
         }
 
         public DbSet<Article> Articles { get; set; }

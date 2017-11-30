@@ -54,6 +54,7 @@
     <Compile Include="CategoryDAL.cs" />
     <Compile Include="CommentDAL.cs" />
     <Compile Include="DbSession.cs" />
+    <Compile Include="DbSessionFactory.cs" />
     <Compile Include="HeadIconDAL.cs" />
     <Compile Include="LeaveMsgDAL.cs" />
     <Compile Include="PalLinkDAL.cs" />

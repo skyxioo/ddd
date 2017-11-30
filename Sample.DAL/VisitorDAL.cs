@@ -5,6 +5,9 @@ namespace Sample.DAL
 {
     public class VisitorDAL : BaseDAL<Visitor>, IVisitorDAL
     {
-        
+        public override void SetDbContext()
+        {
+            _dbContext = new BlogDbContext();
+        }
     }
 }
