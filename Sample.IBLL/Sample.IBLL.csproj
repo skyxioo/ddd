@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>06761140-1ff3-4900-ba31-80c9d212bad9</ProjectGuid>
+    <ProjectGuid>{06761140-1FF3-4900-BA31-80C9D212BAD9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sample.IBLL</RootNamespace>
@@ -30,24 +30,39 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="IArticleService.cs" />
+    <Compile Include="IBaseService.cs" />
+    <Compile Include="ICategoryService.cs" />
+    <Compile Include="ICommentService.cs" />
+    <Compile Include="IHeadIconService.cs" />
+    <Compile Include="ILeaveMsgService.cs" />
+    <Compile Include="IPalLinkService.cs" />
+    <Compile Include="ISearchDetailService.cs" />
+    <Compile Include="ISearchRankService.cs" />
+    <Compile Include="IStaticFileService.cs" />
+    <Compile Include="IVisitorService.cs" />
+    <Compile Include="IWebSettingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sample.IDAL\Sample.IDAL.csproj">
+      <Project>{869b39b1-110a-4a82-81a5-0ba88db9d5fe}</Project>
+      <Name>Sample.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sample.Model\Sample.Model.csproj">
+      <Project>{716dcd4b-f4bd-410d-9bce-96844219e67e}</Project>
+      <Name>Sample.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
