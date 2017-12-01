@@ -17,4 +17,4 @@ namespace Sample.DAL
             return dbSession;
         }
     }
-}$""
+}
