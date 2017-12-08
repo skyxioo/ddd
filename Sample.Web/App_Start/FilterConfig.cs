@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using Sample.Web.Filter;
 
 namespace Sample.Web
 {
@@ -7,6 +8,7 @@ namespace Sample.Web
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new StatisticsTrackerAttribute());
         }
     }
 }
