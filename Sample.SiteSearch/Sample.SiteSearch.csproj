@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{06761140-1FF3-4900-BA31-80C9D212BAD9}</ProjectGuid>
+    <ProjectGuid>{8ED8A99B-90F6-4A81-ACCB-182C6C8508E8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sample.IBLL</RootNamespace>
-    <AssemblyName>Sample.IBLL</AssemblyName>
+    <RootNamespace>Sample.SiteSearch</RootNamespace>
+    <AssemblyName>Sample.SiteSearch</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=2.6.1.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quartz.2.6.1\lib\net40\Quartz.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,30 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IArticleService.cs" />
-    <Compile Include="IBaseService.cs" />
-    <Compile Include="ICategoryService.cs" />
-    <Compile Include="ICommentService.cs" />
-    <Compile Include="IHeadIconService.cs" />
-    <Compile Include="ILeaveMsgService.cs" />
-    <Compile Include="IPalLinkService.cs" />
-    <Compile Include="ISearchDetailService.cs" />
-    <Compile Include="ISearchRankService.cs" />
-    <Compile Include="IServiceSession.cs" />
-    <Compile Include="IStaticFileService.cs" />
-    <Compile Include="IVisitorService.cs" />
-    <Compile Include="IWebSettingService.cs" />
+    <Compile Include="QuartzTick.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sample.IDAL\Sample.IDAL.csproj">
-      <Project>{869b39b1-110a-4a82-81a5-0ba88db9d5fe}</Project>
-      <Name>Sample.IDAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sample.Model\Sample.Model.csproj">
-      <Project>{716dcd4b-f4bd-410d-9bce-96844219e67e}</Project>
-      <Name>Sample.Model</Name>
-    </ProjectReference>
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

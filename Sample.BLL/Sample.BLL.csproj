@@ -50,6 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchDetailService.cs" />
     <Compile Include="SearchRankService.cs" />
+    <Compile Include="ServiceSession.cs" />
     <Compile Include="StaticFileService.cs" />
     <Compile Include="VisitorService.cs" />
     <Compile Include="WebSettingService.cs" />

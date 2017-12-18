@@ -110,7 +110,7 @@ namespace Sample.DAL
             if (isAsc)
             {
                 return _dbContext.Set<T>()
-                    //.Where(whereExp)
+                    .Where(whereExp)
                     .OrderBy<T, TKey>(orderExp)
                     .Skip(pageSize * (pageIndex - 1))
                     .Take(pageSize)

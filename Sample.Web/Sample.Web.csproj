@@ -103,6 +103,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\LogHelper.cs" />
+    <Compile Include="Helpers\OperateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -124,9 +125,21 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Sample.BLL\Sample.BLL.csproj">
+      <Project>{cee4a5f5-3f87-46f2-ab49-1e7d16095710}</Project>
+      <Name>Sample.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sample.Common\Sample.Common.csproj">
       <Project>{e806f3ba-8211-42af-a648-651441562643}</Project>
       <Name>Sample.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sample.IBLL\Sample.IBLL.csproj">
+      <Project>{06761140-1ff3-4900-ba31-80c9d212bad9}</Project>
+      <Name>Sample.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sample.Inject\Sample.Inject.csproj">
+      <Project>{be020844-0d73-41fb-8927-01dfdc27b105}</Project>
+      <Name>Sample.Inject</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
