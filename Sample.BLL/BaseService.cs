@@ -42,6 +42,11 @@ namespace Sample.BLL
             return CurrentDAL.Add(model);
         }
 
+        public int AddRange(IEnumerable<T> list)
+        {
+            return CurrentDAL.AddRange(list);
+        }
+
         public int Delete(int id)
         {
             return CurrentDAL.Delete(id);

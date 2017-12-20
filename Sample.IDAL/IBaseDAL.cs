@@ -11,6 +11,7 @@ namespace Sample.IDAL
     public interface IBaseDAL<T> where T : IEntity
     {
         int Add(T model);
+        int AddRange(IEnumerable<T> list);
         int Delete(int id);
         int Delete(T model);
         int DeleteBy(Expression<Func<T, bool>> whereExp);

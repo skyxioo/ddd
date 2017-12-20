@@ -5,7 +5,7 @@ using System.Web.SessionState;
 using Sample.IBLL;
 using Sample.Inject;
 
-namespace Sample.Web.Helpers
+namespace Sample.WebHelper
 {
     public class OperateHelper
     {

@@ -9,6 +9,7 @@
         ILeaveMsgService LeaveMsgService { get; set; }
         IPalLinkService PalLinkService { get; set; }
         ISearchDetailService SearchDetailService { get; set; }
+        ISearchRankService SearchRankService { get; set; }
         IStaticFileService StaticFileService { get; set; }
         IVisitorService VisitorService { get; set; }
         IWebSettingService WebSettingService { get; set; }

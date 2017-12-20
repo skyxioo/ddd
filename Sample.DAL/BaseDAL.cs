@@ -29,6 +29,12 @@ namespace Sample.DAL
             return _dbContext.SaveChanges();
         }
 
+        public int AddRange(IEnumerable<T> list)
+        {
+            _dbContext.Set<T>().AddRange(list);
+            return _dbContext.SaveChanges();
+        }
+
         public int Delete(int id)
         {
             var model = _dbContext.Set<T>().Find(id);

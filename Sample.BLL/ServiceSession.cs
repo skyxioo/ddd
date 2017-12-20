@@ -91,12 +91,24 @@ namespace Sample.BLL
             set { _searchDetailService = value; }
         }
 
+        private ISearchRankService _searchRankService;
+        public ISearchRankService SearchRankService
+        {
+            get
+            {
+                if (_searchRankService == null)
+                    _searchRankService = new SearchRankService();
+                return _searchRankService;
+            }
+            set { _searchRankService = value; }
+        }
+
         private IStaticFileService _staticFileService;
         public IStaticFileService StaticFileService {
             get
             {
                 if (_staticFileService == null)
-                    _staticFileService = new _staticFileService();
+                    _staticFileService = new StaticFileService();
                 return _staticFileService;
             }
             set { _staticFileService = value; }

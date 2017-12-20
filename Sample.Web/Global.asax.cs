@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using log4net.Config;
+using Sample.SiteSearch;
 
 namespace Sample.Web
 {
@@ -20,6 +21,9 @@ namespace Sample.Web
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            //热搜排行定时任务计划
+            QuartzTick.StartJob();
         }
     }
 }

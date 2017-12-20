@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Web.Mvc;
 using Sample.Common;
-using Sample.Web.Helpers;
+using Sample.WebHelper;
 
 namespace Sample.Web.Filter
 {

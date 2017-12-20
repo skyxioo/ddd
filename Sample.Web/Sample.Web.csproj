@@ -102,8 +102,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\LogHelper.cs" />
-    <Compile Include="Helpers\OperateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +138,14 @@
     <ProjectReference Include="..\Sample.Inject\Sample.Inject.csproj">
       <Project>{be020844-0d73-41fb-8927-01dfdc27b105}</Project>
       <Name>Sample.Inject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sample.SiteSearch\Sample.SiteSearch.csproj">
+      <Project>{8ed8a99b-90f6-4a81-accb-182c6c8508e8}</Project>
+      <Name>Sample.SiteSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sample.WebHelper\Sample.WebHelper.csproj">
+      <Project>{ef65b893-ca72-4d66-a67f-d708525737fe}</Project>
+      <Name>Sample.WebHelper</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

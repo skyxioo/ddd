@@ -1,7 +1,7 @@
 ﻿using System;
 using log4net;
 
-namespace Sample.Web.Helpers
+namespace Sample.WebHelper
 {
     public class LogHelper
     {
