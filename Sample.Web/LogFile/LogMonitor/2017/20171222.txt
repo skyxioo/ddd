@@ -334,3 +334,101 @@
             Form表单：
             URL参数：
                          
+
+记录时间：2017-12-22 16:24:19,886 
+线程ID:[17] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/22 4:24:19
+            结束时间：2017/12/22 16:24:19
+            总 耗 时：43200.017秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-22 16:34:09,094 
+线程ID:[17] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/22 4:34:09
+            结束时间：2017/12/22 16:34:09
+            总 耗 时：43200.057秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-22 16:34:10,166 
+线程ID:[17] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/22 16:34:09
+            结束时间：2017/12/22 16:34:10
+            总 耗 时：1.063秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-22 16:38:53,940 
+线程ID:[17] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/22 4:38:53
+            结束时间：2017/12/22 16:38:53
+            总 耗 时：43200.018秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-22 16:38:54,687 
+线程ID:[17] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/22 16:38:53
+            结束时间：2017/12/22 16:38:54
+            总 耗 时：0.737秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-22 16:42:18,967 
+线程ID:[17] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/22 4:42:18
+            结束时间：2017/12/22 16:42:18
+            总 耗 时：43200.019秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-22 16:42:19,686 
+线程ID:[17] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/22 16:42:18
+            结束时间：2017/12/22 16:42:19
+            总 耗 时：0.711秒
+            Form表单：
+            URL参数：
+                         

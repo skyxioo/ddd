@@ -44,6 +44,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
@@ -254,9 +261,17 @@
       <Project>{e806f3ba-8211-42af-a648-651441562643}</Project>
       <Name>Sample.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sample.DAL\Sample.DAL.csproj">
+      <Project>{84a22d91-c58a-4a08-aa24-1b62b03ea00c}</Project>
+      <Name>Sample.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sample.IBLL\Sample.IBLL.csproj">
       <Project>{06761140-1ff3-4900-ba31-80c9d212bad9}</Project>
       <Name>Sample.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sample.IDAL\Sample.IDAL.csproj">
+      <Project>{869b39b1-110a-4a82-81a5-0ba88db9d5fe}</Project>
+      <Name>Sample.IDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Sample.Inject\Sample.Inject.csproj">
       <Project>{be020844-0d73-41fb-8927-01dfdc27b105}</Project>
