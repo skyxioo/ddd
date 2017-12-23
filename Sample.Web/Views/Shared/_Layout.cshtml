@@ -12,14 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--如果有高版本IE，则用高版本渲染-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-
     <link rel="icon" href="~/Content/images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="~/Content/images/favicon.ico" type="image/x-icon" />
 
     <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/css/index.css" rel="stylesheet" />
     
-    @RenderSection("css", required: false);
+    @RenderSection("css", required: false)
 
     <script src="~/Scripts/jquery-1.9.0.js"></script>
     <script src="~/Scripts/bootstrap.js"></script>
@@ -36,9 +35,9 @@
         <script src="@Url.Content("~/Content/js/ie/html5shiv.js")></script>
     <![endif]-->
 </head>
-<body>
+<body class="nav-fixed">
     <!--加载导航栏-->
-    @{ Html.RenderPartial("~/Views/Shared/_Navbar.cshtml"); }
+    @{ Html.RenderPartial("_Navbar"); }
     
     <!--主体内容部分-->
     <div>
@@ -46,8 +45,11 @@
     </div>
 
     <!--底部版权申明部分-->
-    <footer>
-
+    <footer id="zyn-footer">
+        <div class="container">
+            Copyright © @DateTime.Now.Year <a href="#">Running snail</a>&nbsp; | &nbsp;联系我 :
+            <a href="mailto:ograss@qq.com">ograss@qq.com</a>&nbsp; | &nbsp;All Rights Reserved.&nbsp; | &nbsp;粤ICP备000000000号-1
+        </div>
     </footer>
 </body>
 </html>

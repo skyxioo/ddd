@@ -1,1 +1,153 @@
-﻿/* =========================== 页面头部样式 =========================== */
+﻿/* =========================== 通用样式 =========================== */
+body.nav-fixed {
+    position: relative; /*排除固定导航栏占的高度;否则导航栏会把底下的正文遮住54px;导航栏的高度是54px;*/
+    padding-top: 54px;
+}
+/*使用以下媒体查询（media query）来创建关键的分界点阈值。*/
+@media (min-width: 240px) and (max-width: 991px) {
+    body.nav-fixed {
+        padding-top: 40px;
+    }
+}
+
+/* =========================== 通用样式结束 =========================== */
+
+
+/* =========================== 页面头部样式 =========================== */
+#zyn-header.navbar {
+    background-color: #303542 !important;
+    border-radius: 0;
+    font-size: 16px;
+}
+
+/*LOGO图片地址*/
+.navbar-brand {
+    /*第一个center是背景图水平居中、第二个是垂直居中 navbar的颜色#303542 ：*/
+    background: url(../images/logo.png) no-repeat left center;
+    width: 190px;
+    height: 50px;
+    display: block;
+}
+
+/*LOGO图片地址*/
+.navbar-brand {
+    /*第一个center是背景图水平居中、第二个是垂直居中 navbar的颜色#303542 ：*/
+    background: url(../images/logo.png) no-repeat left center;
+    width: 190px;
+    height: 50px;
+    display: block;
+}
+
+.nav.navbar-nav a.toplevel {
+    line-height: 24px; /*这儿可以通过修改a标签的行高来修改导航栏的高度*/
+}
+
+/* =========================== 页面头部结束 =========================== */
+
+
+
+/*如果是找同时满足两个类的元素，那就紧接着写*/
+.nav.navbar-nav span.glyphicon { /*如果是选择带有glyphicon类的span，那就紧接着写*/
+    font-size: 13px;
+}
+
+
+/* =========================== <IE9 兼容样式 =========================== */
+/* =========================== 响应式 =========================== */
+@media (min-width: 1200px) {
+    .random .visible-lg,
+    .recent .visible-lg,
+    .hot .visible-lg.visible-sm {
+        display: inline-block !important;
+    }
+
+    #zyn-bodyer {
+        font-size: 14px !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .random .visible-md,
+    .recent .visible-md,
+    .hot .visible-xs.visible-md {
+        display: inline-block !important;
+    }
+
+    #zyn-bodyer {
+        font-size: 14px !important;
+    }
+}
+/*这个屏幕之间显示的东西*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .hot .visible-lg.visible-sm {
+        display: inline-block !important;
+    }
+
+    #zyn-bodyer {
+        font-size: 12px !important;
+    }
+
+    .navbar-brand {
+        margin-right: auto !important;
+        margin-left: auto !important;
+        display: block;
+        float: none !important;
+    }
+
+    .navbar-nav {
+        /*width: 100%;*/
+        /*text-align: center;*/
+        display: none;
+    }
+
+    .navbar-nav > li {
+        float: none !important;
+        display: inline-block !important;
+    }
+
+    .navbar-nav > li > a {
+        padding: 10px !important;
+    }
+
+    .navbar-header {
+        /*float: none;*/
+        float: left;
+    }
+}
+
+@media (max-width: 767px) {
+    .hot .visible-xs.visible-md {
+        display: inline-block !important;
+    }
+
+    #zyn-bodyer {
+        font-size: 12px !important;
+    }
+
+    .bs-masthead {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .bs-masthead h1 {
+        font-size: 16px;
+    }
+
+    .bs-masthead .btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .bs-masthead p {
+        font-size: 12px;
+    }
+
+    #zyn-footer {
+        padding: 20px;
+    }
+
+    #load-more {
+        margin-bottom: 30px;
+    }
+}
+/* =========================== 响应式结束 =========================== */
