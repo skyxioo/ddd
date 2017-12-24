@@ -1,1 +1,32 @@
-﻿
+﻿@{ 
+    ViewBag.Title = "奔跑的蜗牛 | 个人博客";
+}
+
+@section headScript{
+    <script type="text/javascript">
+        $(function ($) {
+            $('#home').addClass('active');
+
+            //该函数用于更改jQuery中AJAX请求的默认设置选项。之后执行的所有AJAX请求，
+            //如果对应的选项参数没有设置，将使用更改后的默认设置。
+            $.ajaxSetup({ cache: false });
+        });
+
+        function loadArticleList(queryParameter) {
+
+        }
+    </script>
+}
+
+@*文章列表*@
+<div id="article-list">
+    <div id="loading">
+        <img width="32" height="32" src="/Content/images/ico_loading2.gif" />
+    </div>
+</div>
+
+@*分页条。有列表数据才创建分页条*@
+<div class="pagination">
+    <!--pagation本来就是BootStrap的类，现在用的是自定义的Bootstrap类-->
+    <ul></ul>
+</div>

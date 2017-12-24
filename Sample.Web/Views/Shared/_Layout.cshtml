@@ -27,7 +27,7 @@
     <script src="~/Content/js/bootstrap3-typeahead.js"></script>
     <script src="~/Content/js/zynblog.js"></script>
     
-    @RenderSection("scripts", required: false)
+    @RenderSection("headScript", required: false)
 
     <!--[if lt IE 9]>
         <script src="@Url.Content("~/Content/js/ie/modernizr-2.6.2.js")></script>
@@ -40,8 +40,25 @@
     @{ Html.RenderPartial("_Navbar"); }
     
     <!--主体内容部分-->
-    <div>
-        @RenderBody()
+    <div id="zyn-bodyer">
+        <!--.container 类用于固定宽度并支持响应式布局的容器。-->
+        <div class="container">
+            <!--row必须包含在.container（固定宽度）或 .container-fluid （100% 宽度）中,通过row在水平方向创建一组column12个-->
+            <!--主体-->
+            <div class="row">
+                <div id="mainbody" class="col-md-8">
+                    <div id="ie-warning" class="alert alert-danger fade in">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <span class="glyphicon glyphicon-exclamation-sign"></span> 请注意，本站并不支持低于IE8的浏览器，为了获得最佳效果，推荐使用FireFox浏览器。
+                    </div>
+                    <!-- 内容主体 包含三部分内容：1.每日提示、2.文章列表、3. 分页条-->
+                    @RenderBody()   @*子视图：这一部分包含：每日提示和文章列表*@
+                </div>
+                <div id="sidebar" class="col-md-4">
+                    @RenderSection("side", required: false)
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--底部版权申明部分-->
@@ -51,5 +68,18 @@
             <a href="mailto:ograss@qq.com">ograss@qq.com</a>&nbsp; | &nbsp;All Rights Reserved.&nbsp; | &nbsp;粤ICP备000000000号-1
         </div>
     </footer>
+
+    <!--回到顶部-->
+    <div class="rollbar" style="display: block;">
+        <ul>
+            <li>
+                <a href="/">
+                    <img width="64" height="64" src="/Content/images/ico-rocket.png" />
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    @RenderSection("endScript", required: false)
 </body>
 </html>

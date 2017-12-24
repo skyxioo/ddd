@@ -4525,7 +4525,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-inverse .navbar-nav > .current-menu-item > a {
   color: #ffffff;
  /*background-color: #d9534f !important;  原来zynblog定义为为红色，我定义为海蓝色*/
-    background-color: #1abc9c !important;
+    background-color: #63a029 !important;
 }
 
 .navbar-inverse .navbar-nav > .disabled > a,
@@ -4558,7 +4558,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-inverse .navbar-nav > .open > a:focus {
   color: #ffffff;
   /*background-color: #262c35;   默认的是重黑色，现改为海蓝色*/  
-   background-color: #1abc9c;
+   background-color: #63a029;
    opacity:0.9;
 }
 

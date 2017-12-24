@@ -1,0 +1,980 @@
+
+记录时间：2017-12-24 12:22:46,845 
+线程ID:[10] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 12:22:46
+            结束时间：2017/12/24 12:22:46
+            总 耗 时：0.0482384秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 12:22:54,541 
+线程ID:[10] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 12:22:46
+            结束时间：2017/12/24 12:22:54
+            总 耗 时：7.6830394秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 13:35:11,894 
+线程ID:[48] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 1:35:11
+            结束时间：2017/12/24 13:35:11
+            总 耗 时：43200.001061秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 13:35:17,907 
+线程ID:[48] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 13:35:11
+            结束时间：2017/12/24 13:35:17
+            总 耗 时：6.0127368秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 13:35:38,095 
+线程ID:[31] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 1:35:38
+            结束时间：2017/12/24 13:35:38
+            总 耗 时：43200.0000173秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 13:35:38,096 
+线程ID:[31] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 13:35:38
+            结束时间：2017/12/24 13:35:38
+            总 耗 时：0.0009954秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 13:35:39,026 
+线程ID:[31] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 1:35:39
+            结束时间：2017/12/24 13:35:39
+            总 耗 时：43200.0010616秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 13:35:39,026 
+线程ID:[31] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 13:35:39
+            结束时间：2017/12/24 13:35:39
+            总 耗 时：0秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:15:12,519 
+线程ID:[34] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:15:12
+            结束时间：2017/12/24 14:15:12
+            总 耗 时：43200.0000472秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:15:12,523 
+线程ID:[34] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:15:12
+            结束时间：2017/12/24 14:15:12
+            总 耗 时：0.0040137秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:15:15,532 
+线程ID:[38] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：AboutController,
+            ActionName：Index
+            开始时间：2017/12/24 2:15:15
+            结束时间：2017/12/24 14:15:15
+            总 耗 时：43200.0010434秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:15:15,541 
+线程ID:[38] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：AboutController,
+            ViewName：Index
+            开始时间：2017/12/24 14:15:15
+            结束时间：2017/12/24 14:15:15
+            总 耗 时：0.0090214秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:30:22,159 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:30:22
+            结束时间：2017/12/24 14:30:22
+            总 耗 时：43200.0000662秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:30:27,246 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:30:22
+            结束时间：2017/12/24 14:30:27
+            总 耗 时：5.0865901秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:30:39,223 
+线程ID:[6] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：AboutController,
+            ActionName：Index
+            开始时间：2017/12/24 2:30:39
+            结束时间：2017/12/24 14:30:39
+            总 耗 时：43200.0000577秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:30:39,224 
+线程ID:[6] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：AboutController,
+            ViewName：Index
+            开始时间：2017/12/24 14:30:39
+            结束时间：2017/12/24 14:30:39
+            总 耗 时：0.0010031秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:32:07,970 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:32:07
+            结束时间：2017/12/24 14:32:07
+            总 耗 时：43200.0000287秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:32:08,729 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:32:07
+            结束时间：2017/12/24 14:32:08
+            总 耗 时：0.7587738秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:32:12,012 
+线程ID:[6] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:32:12
+            结束时间：2017/12/24 14:32:12
+            总 耗 时：43200.00004秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:32:12,013 
+线程ID:[6] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:32:12
+            结束时间：2017/12/24 14:32:12
+            总 耗 时：0.0010031秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:32:13,215 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:32:13
+            结束时间：2017/12/24 14:32:13
+            总 耗 时：43200.000051秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:32:13,216 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:32:13
+            结束时间：2017/12/24 14:32:13
+            总 耗 时：0.0010022秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:32:13,789 
+线程ID:[28] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：AboutController,
+            ActionName：Index
+            开始时间：2017/12/24 2:32:13
+            结束时间：2017/12/24 14:32:13
+            总 耗 时：43200.0005367秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:32:13,790 
+线程ID:[28] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：AboutController,
+            ViewName：Index
+            开始时间：2017/12/24 14:32:13
+            结束时间：2017/12/24 14:32:13
+            总 耗 时：0.001527秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:32:49,592 
+线程ID:[39] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:32:49
+            结束时间：2017/12/24 14:32:49
+            总 耗 时：43200.0000685秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:32:49,881 
+线程ID:[39] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:32:49
+            结束时间：2017/12/24 14:32:49
+            总 耗 时：0.28829秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:33:17,924 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:33:17
+            结束时间：2017/12/24 14:33:17
+            总 耗 时：43200.0000337秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:33:18,199 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:33:17
+            结束时间：2017/12/24 14:33:18
+            总 耗 时：0.2746571秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:33:22,036 
+线程ID:[28] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:33:22
+            结束时间：2017/12/24 14:33:22
+            总 耗 时：43200.0000887秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:33:22,038 
+线程ID:[28] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:33:22
+            结束时间：2017/12/24 14:33:22
+            总 耗 时：0.0020066秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:33:23,484 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:33:23
+            结束时间：2017/12/24 14:33:23
+            总 耗 时：43200.0000987秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:33:23,486 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:33:23
+            结束时间：2017/12/24 14:33:23
+            总 耗 时：0.0010027秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:36:06,337 
+线程ID:[49] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:36:06
+            结束时间：2017/12/24 14:36:06
+            总 耗 时：43200.0000288秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:36:06,616 
+线程ID:[49] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:36:06
+            结束时间：2017/12/24 14:36:06
+            总 耗 时：0.2782867秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:36:08,567 
+线程ID:[39] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:36:08
+            结束时间：2017/12/24 14:36:08
+            总 耗 时：43200.0000878秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:36:08,568 
+线程ID:[39] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:36:08
+            结束时间：2017/12/24 14:36:08
+            总 耗 时：0.0010052秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:36:09,733 
+线程ID:[49] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:36:09
+            结束时间：2017/12/24 14:36:09
+            总 耗 时：43200.0000361秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:36:09,734 
+线程ID:[49] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:36:09
+            结束时间：2017/12/24 14:36:09
+            总 耗 时：0.0010018秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:36:48,640 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:36:48
+            结束时间：2017/12/24 14:36:48
+            总 耗 时：43200.028133秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:36:49,931 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:36:48
+            结束时间：2017/12/24 14:36:49
+            总 耗 时：1.2752677秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:36:52,464 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:36:52
+            结束时间：2017/12/24 14:36:52
+            总 耗 时：43200.0000628秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:36:52,465 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:36:52
+            结束时间：2017/12/24 14:36:52
+            总 耗 时：0.000992秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:37:02,519 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:37:02
+            结束时间：2017/12/24 14:37:02
+            总 耗 时：43200.0000753秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:37:02,520 
+线程ID:[36] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:37:02
+            结束时间：2017/12/24 14:37:02
+            总 耗 时：0.0015036秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:40:18,150 
+线程ID:[29] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:40:18
+            结束时间：2017/12/24 14:40:18
+            总 耗 时：43200.0000529秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:40:18,430 
+线程ID:[29] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:40:18
+            结束时间：2017/12/24 14:40:18
+            总 耗 时：0.2800348秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:40:22,211 
+线程ID:[4] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:40:22
+            结束时间：2017/12/24 14:40:22
+            总 耗 时：43200.0000285秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:40:22,212 
+线程ID:[4] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:40:22
+            结束时间：2017/12/24 14:40:22
+            总 耗 时：0.0010027秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:40:24,863 
+线程ID:[10] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:40:24
+            结束时间：2017/12/24 14:40:24
+            总 耗 时：43200.0000286秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:40:24,863 
+线程ID:[10] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:40:24
+            结束时间：2017/12/24 14:40:24
+            总 耗 时：0秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:40:45,583 
+线程ID:[49] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:40:45
+            结束时间：2017/12/24 14:40:45
+            总 耗 时：43200.0000843秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:40:45,583 
+线程ID:[49] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:40:45
+            结束时间：2017/12/24 14:40:45
+            总 耗 时：0.0005014秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:41:09,332 
+线程ID:[44] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:41:09
+            结束时间：2017/12/24 14:41:09
+            总 耗 时：43200.0000449秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:41:09,644 
+线程ID:[44] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:41:09
+            结束时间：2017/12/24 14:41:09
+            总 耗 时：0.3115581秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:41:39,494 
+线程ID:[4] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:41:39
+            结束时间：2017/12/24 14:41:39
+            总 耗 时：43200.0000121秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:41:39,819 
+线程ID:[4] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:41:39
+            结束时间：2017/12/24 14:41:39
+            总 耗 时：0.3254081秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:43:20,116 
+线程ID:[35] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:43:20
+            结束时间：2017/12/24 14:43:20
+            总 耗 时：43200.0000092秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:43:20,390 
+线程ID:[35] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:43:20
+            结束时间：2017/12/24 14:43:20
+            总 耗 时：0.2737606秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:43:27,952 
+线程ID:[29] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:43:27
+            结束时间：2017/12/24 14:43:27
+            总 耗 时：43200.000017秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:43:27,953 
+线程ID:[29] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:43:27
+            结束时间：2017/12/24 14:43:27
+            总 耗 时：0.0010039秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:44:16,978 
+线程ID:[10] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:44:16
+            结束时间：2017/12/24 14:44:16
+            总 耗 时：43200.0000976秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:44:17,244 
+线程ID:[10] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:44:16
+            结束时间：2017/12/24 14:44:17
+            总 耗 时：0.2665394秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:44:37,452 
+线程ID:[29] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:44:37
+            结束时间：2017/12/24 14:44:37
+            总 耗 时：43200.0000058秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:44:37,701 
+线程ID:[29] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:44:37
+            结束时间：2017/12/24 14:44:37
+            总 耗 时：0.2482891秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:48:05,119 
+线程ID:[29] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:48:05
+            结束时间：2017/12/24 14:48:05
+            总 耗 时：43200.0000291秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:48:05,389 
+线程ID:[29] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:48:05
+            结束时间：2017/12/24 14:48:05
+            总 耗 时：0.2700121秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:51:19,640 
+线程ID:[10] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2017/12/24 2:51:19
+            结束时间：2017/12/24 14:51:19
+            总 耗 时：43200.0000097秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:51:19,644 
+线程ID:[10] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2017/12/24 14:51:19
+            结束时间：2017/12/24 14:51:19
+            总 耗 时：0.0040098秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:55:45,393 
+线程ID:[35] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：AboutController,
+            ActionName：Index
+            开始时间：2017/12/24 2:55:45
+            结束时间：2017/12/24 14:55:45
+            总 耗 时：43200.0010735秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2017-12-24 14:55:45,668 
+线程ID:[35] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：AboutController,
+            ViewName：Index
+            开始时间：2017/12/24 14:55:45
+            结束时间：2017/12/24 14:55:45
+            总 耗 时：0.273835秒
+            Form表单：
+            URL参数：
+                         

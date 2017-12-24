@@ -10,5 +10,10 @@ namespace Sample.Web.Controllers
             return
             View();
         }
+
+        public ActionResult WrapArtList()
+        {
+            return Json(null);
+        }
     }
 }

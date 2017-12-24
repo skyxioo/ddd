@@ -9,8 +9,13 @@ body.nav-fixed {
         padding-top: 40px;
     }
 }
+/*如果是找同时满足两个类的元素，那就紧接着写*/
+.nav.navbar-nav span.glyphicon { /*如果是选择带有glyphicon类的span，那就紧接着写*/
+    font-size: 13px;
+}
 
 /* =========================== 通用样式结束 =========================== */
+
 
 
 /* =========================== 页面头部样式 =========================== */
@@ -45,11 +50,74 @@ body.nav-fixed {
 /* =========================== 页面头部结束 =========================== */
 
 
-
-/*如果是找同时满足两个类的元素，那就紧接着写*/
-.nav.navbar-nav span.glyphicon { /*如果是选择带有glyphicon类的span，那就紧接着写*/
-    font-size: 13px;
+/* =========================== 主体样式 =========================== */
+#zyn-bodyer {
+    padding: 30px 0;
 }
+
+/* =========================== 主体样式结束 =========================== */
+
+/* =========================== 页脚样式 =========================== */
+#zyn-footer {
+    display: block;
+    text-align: center;
+    color: #eeeeee;
+    padding: 30px;
+    background-color: #3d4450;
+}
+
+#zyn-footer a {
+    color: #eeeeee;
+}
+
+#zyn-footer a:hover {
+    color: #d9534f;
+}
+
+/*回到顶部*/
+.rollbar {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    display: none;
+}
+
+.rollbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 50px;
+}
+
+.rollbar li {
+    position: relative;
+    margin-top: 5px;
+    text-align: center;
+    opacity: .4;
+    filter: alpha(opacity=40);
+}
+
+.rollbar a {
+    position: relative;
+    z-index: 2;
+    display: block;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #666;
+    color: #666; /*666是浅灰色*/
+}
+
+.rollbar a:hover {
+    color: #fff; /*ffffff是白色*/
+}
+        
+.rollbar li:hover {
+    opacity: .9;
+    filter: alpha(opacity=90);
+}
+
+/* =========================== 页脚样式结束 =========================== */
 
 
 /* =========================== <IE9 兼容样式 =========================== */
