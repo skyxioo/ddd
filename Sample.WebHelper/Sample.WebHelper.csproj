@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="LogHelper.cs" />
     <Compile Include="OperateHelper.cs" />
+    <Compile Include="PagerHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
