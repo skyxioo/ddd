@@ -111,23 +111,29 @@ namespace Sample.DAL
                 return _dbContext.Set<T>().Where(whereExp).OrderByDescending<T, TKey>(orderExp).ToList();
             }
         }
-        public List<T> GetPagedListBy<TKey>(int pageIndex, int pageSize, Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp, bool isAsc)
+        public List<T> GetPagedListBy<TKey>(int pageIndex, int pageSize, Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp, bool isAsc, out int count)
         {
             if (isAsc)
             {
-                return _dbContext.Set<T>()
+                var query = _dbContext.Set<T>()
                     .Where(whereExp)
-                    .OrderBy<T, TKey>(orderExp)
-                    .Skip(pageSize * (pageIndex - 1))
+                    .OrderBy<T, TKey>(orderExp);
+                //统计总记录
+                count = query.Count();
+
+                return query.Skip(pageSize * (pageIndex - 1))
                     .Take(pageSize)
                     .ToList();
             }
             else
             {
-                return _dbContext.Set<T>()
+                var query = _dbContext.Set<T>()
                     .Where(whereExp)
-                    .OrderByDescending<T, TKey>(orderExp)
-                    .Skip(pageSize * (pageIndex - 1))
+                    .OrderByDescending<T, TKey>(orderExp);
+                //统计总记录数
+                count = query.Count();
+
+                return query.Skip(pageSize * (pageIndex - 1))
                     .Take(pageSize)
                     .ToList();
             }

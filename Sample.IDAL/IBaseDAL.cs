@@ -20,6 +20,6 @@ namespace Sample.IDAL
         T GetEntity(int id);
         List<T> GetListBy(Expression<Func<T, bool>> whereExp);
         List<T> GetListBy<TKey>(Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp, bool isAsc);
-        List<T> GetPagedListBy<TKey>(int pageIndex, int pageSize, Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp, bool isAsc);
+        List<T> GetPagedListBy<TKey>(int pageIndex, int pageSize, Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp, bool isAsc, out int count);
     }
 }
