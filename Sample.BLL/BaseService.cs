@@ -89,9 +89,9 @@ namespace Sample.BLL
         }
 
         public List<T> GetPagedListBy<TKey>(int pageIndex, int pageSize, Expression<Func<T, bool>> whereExp,
-            Expression<Func<T, TKey>> orderExp, bool isAsc)
+            Expression<Func<T, TKey>> orderExp, bool isAsc, out int count)
         {
-            return CurrentDAL.GetPagedListBy(pageIndex, pageSize, whereExp, orderExp, isAsc);
+            return CurrentDAL.GetPagedListBy(pageIndex, pageSize, whereExp, orderExp, isAsc, out count);
         }
     }
 }

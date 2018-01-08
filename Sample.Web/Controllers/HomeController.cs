@@ -6,6 +6,7 @@ using Sample.WebHelper;
 using System.Collections.Generic;
 using Sample.Model;
 using System;
+using Sample.Common;
 
 namespace Sample.Web.Controllers
 {
@@ -31,11 +32,13 @@ namespace Sample.Web.Controllers
 
             List<Article> articleList = new List<Article>();
             int totalCount = 0;
-            Predicate<Article> predicate = new Predicate<Article>();
+            
 
+            var whereExp = PredicateBuilder.True<Article>();
             if (id == 0)//取所有博文，对应首页<Home/Index/0>
             {
-                articleList = _articleService.GetPagedListBy(pageIndex, pageSize, )
+                whereExp.And(p => p.Status == 1);
+                articleList = _articleService.GetPagedListBy(pageIndex, pageSize, whereExp, p => p.SubTime, true, out totalCount);
             }
 
             return Json(null);

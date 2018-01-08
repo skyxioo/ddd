@@ -1,0 +1,28 @@
+
+记录时间：2018-01-08 19:03:30,779 
+线程ID:[17] 
+日志级别：INFO  
+跟踪描述：
+            Action执行时间监控
+            ControllerName：HomeController,
+            ActionName：Index
+            开始时间：2018/1/8 7:03:30
+            结束时间：2018/1/8 19:03:30
+            总 耗 时：43200.018秒
+            Form表单：
+            URL参数：
+                         
+
+记录时间：2018-01-08 19:03:32,558 
+线程ID:[17] 
+日志级别：INFO  
+跟踪描述：
+            View视图生成时间监控
+            ControllerName：HomeController,
+            ViewName：Index
+            开始时间：2018/1/8 19:03:30
+            结束时间：2018/1/8 19:03:32
+            总 耗 时：1.766秒
+            Form表单：
+            URL参数：
+                         
