@@ -77,12 +77,12 @@ namespace Sample.BLL
             return CurrentDAL.GetEntity(id);
         }
 
-        public List<T> GetListBy(Expression<Func<T, bool>> whereExp)
+        public IQueryable<T> GetListBy(Expression<Func<T, bool>> whereExp)
         {
             return CurrentDAL.GetListBy(whereExp);
         }
 
-        public List<T> GetListBy<TKey>(Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp,
+        public IQueryable<T> GetListBy<TKey>(Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp,
             bool isAsc)
         {
             return CurrentDAL.GetListBy(whereExp, orderExp, isAsc);

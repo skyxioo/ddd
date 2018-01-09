@@ -1,4 +1,6 @@
-﻿@{ 
+﻿@model Int32
+
+@{ 
     ViewBag.Title = "奔跑的蜗牛 | 个人博客";
 }
 
@@ -10,10 +12,71 @@
             //该函数用于更改jQuery中AJAX请求的默认设置选项。之后执行的所有AJAX请求，
             //如果对应的选项参数没有设置，将使用更改后的默认设置。
             $.ajaxSetup({ cache: false });
+
+            loadArticleList("?pageIndex=1&pageSize=7");
         });
 
         function loadArticleList(queryParameter) {
+            jQuery.ajax({
+                type: "GET",
+                url: "/Home/WrapArtList/" + @Model + queryParameter,
+                dataType: "json",
+                beforeSend: function () {
+                    jQuery("#loading").css("text-align", "center");
+                    jQuery("#loading").slideDown();
+                },
+                success: function (res) {
+                    if (res.code == "0") {
+                        jQuery("#loading").slideUp("fast");
+                        var len = res.data.length > 0;
+                        for (var i = 0; i < len; i++) {
+                            var strArticle = '';
+                            if (i == 0) {
+                                strArticle = '<article class="excerpt excerpt-first">';
+                            } else if (i == len - 1) {
+                                strArticle = '<article class="excerpt excerpt-end">';
+                            } else {
+                                strArticle = '<article class="excerpt">';
+                            }
 
+                            //博文标题
+                            strArticle += '<header>';
+                            strArticle += '<a class="cat" href="#">' + data.CoreData[i].CategoryName + '<i></i></a>';
+                            strArticle += '<h2><a class="gotoArchive" href=\"/Archives/Index/' + data.CoreData[i].Id + '\" title=\"' + data.CoreData[i].Title + '\">' + data.CoreData[i].Title + '</a></h2>';
+                            strArticle += '</header>';
+                            //-标题下的tips小信息
+                            strArticle += '<p class="meta">';
+                            strArticle += '<span class="posttime">' + data.CoreData[i].SubTime + '</span>';
+                            strArticle += '<span class="viewnum">浏览(<a href="#">' + data.CoreData[i].ViewCount + '</a>)</span>';
+                            strArticle += '<span class="commentnum">评论(<a href="/Archives/Index/' + data.CoreData[i].Id + '#comments-title">' + data.CoreData[i].CommentCount + '</a>)</span>';
+                            strArticle += '<span class="praisebtn">  <img width="15" height="15" class="praisenum" src="/Content/images/ico_praise.png" />(<a data-id=\"' + data.CoreData[i].Id + '\" praise-flag="0"  href="/">' + data.CoreData[i].Digg + '</a>)</span>';
+                            strArticle += '</p>';
+                            //正文:默认显示90个汉字或180个英文(后台已处理)
+                            strArticle += '<p class="note">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + data.CoreData[i].Contents + '....</p>';
+                            //关键词：<!--最多显示3个-->
+                            strArticle += '<footer class="entry-footer">';
+                            strArticle += '<span itemprop="keywords" class="tags-links">';//<!--itemprop属性就是方便机器识别的特定的标记-->
+                            //最开始把for里面的变量也写为了i所以浏览器停止运行了；使用前先判断一下keywords是否为空
+                            var keywordslen = data.CoreData[i].Keywords.length;
+                            if (data.CoreData[i].Keywords && keywordslen != 0) {
+                                for (var j = 0; j < keywordslen; j++) {
+                                    strArticle += '<a rel="tag" href="/">' + data.CoreData[i].Keywords[j] + '</a>';
+                                }
+                            }
+                            strArticle += '</span>';
+                            strArticle += '<a class="more-link gotoArchive" rel="nofollow" href=\"/Archives/Index/' + data.CoreData[i].Id + '\">继续阅读 »</a>';
+                            strArticle += '</footer>';
+                            strArticle += '</article>';
+
+                            //附加
+                            jQuery('#article-list').append(strArticle);
+                        }
+
+                        //组装分页插件
+                        jQuery('.pagination ul').html(res.data.pagedHtml);
+                    }
+                }
+            });
         }
     </script>
 }

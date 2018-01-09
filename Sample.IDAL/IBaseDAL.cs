@@ -18,8 +18,8 @@ namespace Sample.IDAL
         int Update(T model, params string[] propertyNames);
         int UpdateBy(T model, Expression<Func<T, bool>> whereExp, params string[] propertyNames);
         T GetEntity(int id);
-        List<T> GetListBy(Expression<Func<T, bool>> whereExp);
-        List<T> GetListBy<TKey>(Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp, bool isAsc);
+        IQueryable<T> GetListBy(Expression<Func<T, bool>> whereExp);
+        IQueryable<T> GetListBy<TKey>(Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp, bool isAsc);
         List<T> GetPagedListBy<TKey>(int pageIndex, int pageSize, Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp, bool isAsc, out int count);
     }
 }

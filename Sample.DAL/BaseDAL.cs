@@ -30,7 +30,7 @@ namespace Sample.DAL
         }
 
         public int AddRange(IEnumerable<T> list)
-        {
+        {            
             _dbContext.Set<T>().AddRange(list);
             return _dbContext.SaveChanges();
         }
@@ -49,10 +49,11 @@ namespace Sample.DAL
         }
         public int DeleteBy(Expression<Func<T, bool>> whereExp)
         {
-            var batch = _dbContext.Set<T>().Where(whereExp).ToList();
-            batch.ForEach(p => {
-                _dbContext.Set<T>().Remove(p);
-            });
+            var batch = _dbContext.Set<T>().Where(whereExp);
+            //batch.ForEach(p => {
+            //    _dbContext.Set<T>().Remove(p);
+            //});
+            _dbContext.Set<T>().RemoveRange(batch);
             return _dbContext.SaveChanges();
         }
         public int Update(T model, params string[] propertyNames)
@@ -96,19 +97,19 @@ namespace Sample.DAL
         {
             return _dbContext.Set<T>().Find(id);
         }
-        public List<T> GetListBy(Expression<Func<T, bool>> whereExp)
+        public IQueryable<T> GetListBy(Expression<Func<T, bool>> whereExp)
         {
-            return _dbContext.Set<T>().Where(whereExp).ToList();
+            return _dbContext.Set<T>().Where(whereExp);
         }
-        public List<T> GetListBy<TKey>(Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp, bool isAsc)
+        public IQueryable<T> GetListBy<TKey>(Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp, bool isAsc)
         {
             if (isAsc)
             {
-                return _dbContext.Set<T>().Where(whereExp).OrderBy<T, TKey>(orderExp).ToList();
+                return _dbContext.Set<T>().Where(whereExp).OrderBy<T, TKey>(orderExp);
             }
             else
             {
-                return _dbContext.Set<T>().Where(whereExp).OrderByDescending<T, TKey>(orderExp).ToList();
+                return _dbContext.Set<T>().Where(whereExp).OrderByDescending<T, TKey>(orderExp);
             }
         }
         public List<T> GetPagedListBy<TKey>(int pageIndex, int pageSize, Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp, bool isAsc, out int count)

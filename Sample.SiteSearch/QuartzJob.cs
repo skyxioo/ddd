@@ -7,6 +7,7 @@ using Sample.WebHelper;
 
 namespace Sample.SiteSearch
 {
+    [DisallowConcurrentExecution]
     public class QuartzJob : IJob
     {
         private ISearchDetailService _searchDetailService = OperateHelper.Current._serviceSession.SearchDetailService;
@@ -17,7 +18,7 @@ namespace Sample.SiteSearch
             //清空热搜榜排名
             _searchRankService.DeleteBy(p => true);
 
-            var details = _searchDetailService.GetListBy(p => true);
+            var details = _searchDetailService.GetListBy(p => true).ToList();
             var list = from p in details
                 group p by p.KeyWord
                 into g
@@ -28,7 +29,8 @@ namespace Sample.SiteSearch
                     SearchTimes = g.Count()
                 };
             //统计后插入热搜排行榜
-            _searchRankService.AddRange(list);
+            if(list.Count() > 0)
+                _searchRankService.AddRange(list);
         }
     }
 }
