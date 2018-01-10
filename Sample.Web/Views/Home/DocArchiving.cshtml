@@ -1,0 +1,20 @@
+﻿@model List<Sample.Model.ViewModel.CategoryViewModel>
+
+<aside id="doc_category">
+    <div class="panel panel-zyn hidden-xs">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-tags newicon"></span> 文章分类
+        </div>
+        <div class="d_tags">
+            @if (Model != null && Model.Count > 0)
+            {
+                foreach (var item in this.Model)
+                {
+                <a href="/Home/Index/@item.CategoryId">
+                    @item.CategoryName  (@item.ArticleCount)
+                </a>
+                }
+            }
+        </div>
+    </div>
+</aside>

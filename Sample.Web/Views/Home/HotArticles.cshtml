@@ -1,0 +1,28 @@
+﻿@model List<Sample.Model.ViewModel.HotArticleViewModel>
+
+<aside id="hot_article">
+    <div class="panel panel-zyn hidden-xs">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-leaf newicon"></span> 热门文章
+            <span class="panel-remove glyphicon glyphicon-remove-circle"></span>
+            <span class="panel-toggle glyphicon glyphicon-upload"></span>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            @if (Model != null && Model.Count > 0)
+            {
+                foreach (var item in this.Model)
+                {
+                    <li class="list-group-item">
+                        <span class="post-title">
+                            <a href="@Url.Action("Index", "Archives", new { id = item.Id })" title="@item.Title">
+                                @item.Title
+                            </a>
+                        </span>
+                        <span class="badge">@item.ViewCount</span>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</aside>

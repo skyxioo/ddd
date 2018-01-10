@@ -55,7 +55,7 @@ namespace Sample.WebHelper
                     //当前页
                     pagerHtmlString.AppendFormat("<li class='active'><span>{0}</span></li>", j);
                     //当页容量为满页（6页）时，当前页为当前页码条最后一页显示…
-                    if (pageBarCapacity == pageBarSize && j == (start + pageBarSize - 1))
+                    if (pageBarCapacity == pageBarSize && currentPage == (start + pageBarSize - 1))
                     {
                         if (currentPage + 1 < totalPages)
                         {
@@ -66,12 +66,12 @@ namespace Sample.WebHelper
                                 redirectUrl, totalPages, pageSize, totalPages);
                         }
                     }
-                    else
-                    {
-                        pagerHtmlString.AppendFormat(
-                            "<li><a href='{0}?pageIndex={1}&pageSize={2}'>{3}</a></li>", redirectUrl, j,
-                            pageSize, j);
-                    }
+                }
+                else
+                {
+                    pagerHtmlString.AppendFormat(
+                        "<li><a href='{0}?pageIndex={1}&pageSize={2}'>{3}</a></li>", redirectUrl, j,
+                        pageSize, j);
                 }
             }
 

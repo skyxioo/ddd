@@ -28,7 +28,7 @@
                 success: function (res) {
                     if (res.code == "0") {
                         jQuery("#loading").slideUp("fast");
-                        var len = res.data.length > 0;
+                        var len = res.data.length;
                         for (var i = 0; i < len; i++) {
                             var strArticle = '';
                             if (i == 0) {
@@ -41,39 +41,53 @@
 
                             //博文标题
                             strArticle += '<header>';
-                            strArticle += '<a class="cat" href="#">' + data.CoreData[i].CategoryName + '<i></i></a>';
-                            strArticle += '<h2><a class="gotoArchive" href=\"/Archives/Index/' + data.CoreData[i].Id + '\" title=\"' + data.CoreData[i].Title + '\">' + data.CoreData[i].Title + '</a></h2>';
+                            strArticle += '<a class="cat" href="#">' + res.data[i].CategoryName + '<i></i></a>';
+                            strArticle += '<h2><a class="gotoArchive" href=\"/Archives/Index/' + res.data[i].Id + '\" title=\"' + res.data[i].Title + '\">' + res.data[i].Title + '</a></h2>';
                             strArticle += '</header>';
                             //-标题下的tips小信息
                             strArticle += '<p class="meta">';
-                            strArticle += '<span class="posttime">' + data.CoreData[i].SubTime + '</span>';
-                            strArticle += '<span class="viewnum">浏览(<a href="#">' + data.CoreData[i].ViewCount + '</a>)</span>';
-                            strArticle += '<span class="commentnum">评论(<a href="/Archives/Index/' + data.CoreData[i].Id + '#comments-title">' + data.CoreData[i].CommentCount + '</a>)</span>';
-                            strArticle += '<span class="praisebtn">  <img width="15" height="15" class="praisenum" src="/Content/images/ico_praise.png" />(<a data-id=\"' + data.CoreData[i].Id + '\" praise-flag="0"  href="/">' + data.CoreData[i].Digg + '</a>)</span>';
+                            strArticle += '<span class="posttime">' + res.data[i].SubTime + '</span>';
+                            strArticle += '<span class="viewnum">浏览(<a href="#">' + res.data[i].ViewCount + '</a>)</span>';
+                            strArticle += '<span class="commentnum">评论(<a href="/Archives/Index/' + res.data[i].Id + '#comments-title">' + res.data[i].CommentCount + '</a>)</span>';
+                            strArticle += '<span class="praisebtn">  <img width="15" height="15" class="praisenum" src="/Content/images/ico_praise.png" />(<a data-id=\"' + res.data[i].Id + '\" praise-flag="0"  href="/">' + res.data[i].Digg + '</a>)</span>';
                             strArticle += '</p>';
-                            //正文:默认显示90个汉字或180个英文(后台已处理)
-                            strArticle += '<p class="note">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + data.CoreData[i].Contents + '....</p>';
-                            //关键词：<!--最多显示3个-->
+                            //正文:默认显示300个汉字或600个英文(后台已处理)
+                            strArticle += '<p class="note">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + res.data[i].Contents + '....</p>';
+                            //关键词：<!--最多显示5个-->
                             strArticle += '<footer class="entry-footer">';
                             strArticle += '<span itemprop="keywords" class="tags-links">';//<!--itemprop属性就是方便机器识别的特定的标记-->
                             //最开始把for里面的变量也写为了i所以浏览器停止运行了；使用前先判断一下keywords是否为空
-                            var keywordslen = data.CoreData[i].Keywords.length;
-                            if (data.CoreData[i].Keywords && keywordslen != 0) {
+                            var keywordslen = res.data[i].Keywords.length;
+                            if (res.data[i].Keywords && keywordslen != 0) {
                                 for (var j = 0; j < keywordslen; j++) {
-                                    strArticle += '<a rel="tag" href="/">' + data.CoreData[i].Keywords[j] + '</a>';
+                                    strArticle += '<a rel="tag" href="/">' + res.data[i].Keywords[j] + '</a>';
                                 }
                             }
                             strArticle += '</span>';
-                            strArticle += '<a class="more-link gotoArchive" rel="nofollow" href=\"/Archives/Index/' + data.CoreData[i].Id + '\">继续阅读 »</a>';
+                            strArticle += '<a class="more-link gotoArchive" rel="nofollow" href=\"/Archives/Index/' + res.data[i].Id + '\">继续阅读 »</a>';
                             strArticle += '</footer>';
                             strArticle += '</article>';
-
+                            
                             //附加
                             jQuery('#article-list').append(strArticle);
                         }
 
                         //组装分页插件
-                        jQuery('.pagination ul').html(res.data.pagedHtml);
+                        jQuery('.pagination ul').html(res.pagedHtml);
+
+                        //为分页按钮注册点击事件
+                        jQuery('.pagination ul a').click(function () {
+                            var url = jQuery(this).attr('href');
+                            var queryParam = url.substr(url.indexOf('?'));
+
+                            //清空数据
+                            jQuery('#article-list article').remove();
+                            jQuery('.pagination ul li').remove();   
+                            jQuery("body,html").animate({ scrollTop: 0 }, 500);
+                            
+                            loadArticleList(queryParam);
+                            return false;
+                        });
                     }
                 }
             });
@@ -93,3 +107,9 @@
     <!--pagation本来就是BootStrap的类，现在用的是自定义的Bootstrap类-->
     <ul></ul>
 </div>
+
+@section aside{
+    @Html.Partial("_CareForMe")
+    @{ Html.RenderAction("DocArchiving", "Home"); }
+    @{ Html.RenderAction("HotArticles", "Home"); }
+}

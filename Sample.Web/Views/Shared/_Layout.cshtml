@@ -14,10 +14,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <link rel="icon" href="~/Content/images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="~/Content/images/favicon.ico" type="image/x-icon" />
-
     <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
-    <link href="~/Content/css/index.css" rel="stylesheet" />
-    
+    <link href="~/Content/css/index.css" rel="stylesheet" />    
     @RenderSection("css", required: false)
 
     <script src="~/Scripts/jquery-1.9.0.js"></script>
@@ -25,8 +23,7 @@
     <script src="~/Scripts/jquery.validate.js"></script>
     <script src="~/Content/js/jquery.praise.js"></script>
     <script src="~/Content/js/bootstrap3-typeahead.js"></script>
-    <script src="~/Content/js/zynblog.js"></script>
-    
+    <script src="~/Content/js/index.js"></script>    
     @RenderSection("headScript", required: false)
 
     <!--[if lt IE 9]>
@@ -55,14 +52,14 @@
                     @RenderBody()   @*子视图：这一部分包含：每日提示和文章列表*@
                 </div>
                 <div id="sidebar" class="col-md-4">
-                    @RenderSection("side", required: false)
+                    @RenderSection("aside", required: false)
                 </div>
             </div>
         </div>
     </div>
 
     <!--底部版权申明部分-->
-    <footer id="zyn-footer">
+    <footer id="zyn-footer" class="footer navbar-fixed-bottom">
         <div class="container">
             Copyright © @DateTime.Now.Year <a href="#">Running snail</a>&nbsp; | &nbsp;联系我 :
             <a href="mailto:ograss@qq.com">ograss@qq.com</a>&nbsp; | &nbsp;All Rights Reserved.&nbsp; | &nbsp;粤ICP备000000000号-1
@@ -70,7 +67,7 @@
     </footer>
 
     <!--回到顶部-->
-    <div class="rollbar" style="display: block;">
+    <div class="rollbar">
         <ul>
             <li>
                 <a href="/">

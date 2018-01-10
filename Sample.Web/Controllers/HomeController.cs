@@ -16,6 +16,7 @@ namespace Sample.Web.Controllers
     {
         private IArticleService _articleService = OperateHelper.Current._serviceSession.ArticleService;
         private ICommentService _commentService = OperateHelper.Current._serviceSession.CommentService;
+        private ICategoryService _categoryService = OperateHelper.Current._serviceSession.CategoryService;
 
         /// <summary>
         /// 首页
@@ -101,6 +102,42 @@ namespace Sample.Web.Controllers
             };
 
             return Json(data, JsonRequestBehavior.AllowGet);
+        }
+
+        /// <summary>
+        /// 文章分类
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult DocArchiving()
+        {
+            var categoryList = _categoryService.GetListBy(p => p.Status == 1).ToList();
+            var categoryViewList = from p in categoryList
+                                   select new CategoryViewModel
+                                   {
+                                       CategoryId = p.Id,
+                                       CategoryName = p.Name,
+                                       ArticleCount = _articleService.GetListBy(a => a.CategoryId == p.Id && a.Status == 1).Count()
+                                   };
+
+            return PartialView(categoryViewList.ToList());
+        }
+
+        /// <summary>
+        /// 热门文章
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult HotArticles()
+        {
+            int total = 8;
+            var articles = _articleService.GetListBy(a => a.Status == 1, o => o.ViewCount, false).Take(total);
+            var articleViewList = (from p in articles
+                                  select new HotArticleViewModel
+                                  {
+                                      Id = p.Id,
+                                      Title = p.Title,
+                                      ViewCount = p.ViewCount
+                                  }).ToList();
+            return PartialView(articleViewList);
         }
     }
 }
