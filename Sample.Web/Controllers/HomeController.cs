@@ -9,6 +9,7 @@ using System;
 using Sample.Common;
 using Sample.Model.ViewModel;
 using Sample.Model.FormatModel;
+using System.Configuration;
 
 namespace Sample.Web.Controllers
 {
@@ -128,7 +129,7 @@ namespace Sample.Web.Controllers
         /// <returns></returns>
         public ActionResult HotArticles()
         {
-            int total = 8;
+            int total = 6;
             var articles = _articleService.GetListBy(a => a.Status == 1, o => o.ViewCount, false).Take(total);
             var articleViewList = (from p in articles
                                   select new HotArticleViewModel
@@ -138,6 +139,39 @@ namespace Sample.Web.Controllers
                                       ViewCount = p.ViewCount
                                   }).ToList();
             return PartialView(articleViewList);
+        }
+
+        /// <summary>
+        /// 最新评论
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult NewComments()
+        {
+            var commentsList = _commentService.GetListBy(c => c.Status == 1, o => o.SubTime, false).Take(5).ToList();
+            var commentsViewList = new List<CommentViewModel>();
+            //默认头像地址
+            string iconPath = ConfigurationManager.AppSettings["DefaultHeadIcon"];
+            foreach (var comment in commentsList)
+            {
+                int? visitorId = comment.VisitorId;
+                if(visitorId.HasValue)
+                {
+                    int? headIconId = comment.Visitor.VisitorIconId;
+                    if (headIconId.HasValue)
+                        iconPath = comment.Visitor.HeadIcon.IconURL;
+                }
+
+                CommentViewModel commentViewModel = new CommentViewModel
+                {
+                    CmtId = comment.Id,
+                    CmtText = comment.CmtText,
+                    CmtArtId = comment.CmtArtId,
+                    CmtIconUrl = iconPath
+                };
+                commentsViewList.Add(commentViewModel);
+            }
+
+            return PartialView(commentsViewList);
         }
     }
 }

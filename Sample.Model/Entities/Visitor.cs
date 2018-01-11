@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace Sample.Model
 {
     public class Visitor : IEntity
     {
+        [Key]
         public int Id { get; set; }
         public string VisitorName { get; set; }
         public int? VisitorIconId { get; set; }

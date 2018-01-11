@@ -1,0 +1,28 @@
+﻿
+@model List<Sample.Model.ViewModel.CommentViewModel>
+
+<aside id="zyn_latest_comments-2">
+    <div class="panel panel-zyn hidden-xs">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-tree-deciduous newicon"></span> 最新留言
+        </div>
+        <ul class="list-group list-group-flush">
+            @if (Model != null && Model.Count > 0)
+            {
+                foreach (var item in Model)
+                {
+                    <li class="list-group-item">
+                        <span class="author-avatar">
+                            <img data-url="@Url.Content(item.CmtIconUrl)" class="avatar avatar-40 photo" height="40" width="40">
+                        </span>
+                        <span class="comment-log">
+                            <a href="/Archives/Index/@item.CmtArtId">
+                                @item.CmtText
+                            </a>
+                        </span>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</aside>

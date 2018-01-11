@@ -268,6 +268,8 @@
     <Content Include="Views\Shared\_CareForMe.cshtml" />
     <Content Include="Views\Home\DocArchiving.cshtml" />
     <Content Include="Views\Home\HotArticles.cshtml" />
+    <Content Include="Views\Home\NewComments.cshtml" />
+    <Content Include="Views\Home\TagCloud.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

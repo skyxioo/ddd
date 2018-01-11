@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace Sample.Model
 {
     public class HeadIcon : IEntity
     {
+        [Key]
         public int Id { get; set; }
         public string IconName { get; set; }
         public string IconRawName { get; set; }

@@ -36,6 +36,34 @@
                     </a>
                 </li>
             </ul>
+
+            @*搜索框 *@
+            <script type="text/javascript">
+                $(function () {
+                    $('#searchWords').on('keydown', function (e) {
+                        var key = e.which;
+                        if (key == 13) {
+                            e.preventDefault();
+                            var words = $('#searchWords').val();
+                            words = $.trim(words);
+                            if (words == ' ' || words == null || words == undefined) {
+                                alert('请输入搜索词');
+                            } else {
+                                $('#searchform').submit();
+                            }
+                        }
+                        return false;
+                    });
+                });
+            </script>
+            <form id="searchform" class="navbar-form navbar-right" role="search" target="_blank" method="get" action="/Search/Index">
+                <div class="form-group">
+                    <input type="text" id="searchWords" name="searchWords" class="form-control" data-provide="typeahead" autocomplete="off" placeholder="请输入要搜索关键词">
+                </div>
+                <button type="submit" class="btn" id="searchbtn">
+                    搜索
+                </button>
+            </form>
         </div>
     </div>
 </nav>
