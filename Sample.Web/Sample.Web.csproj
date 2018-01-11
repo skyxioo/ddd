@@ -243,6 +243,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\ArchivesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LeaveMsgController.cs" />
     <Compile Include="Filter\StatisticsTrackerAttribute.cs" />
@@ -270,6 +271,7 @@
     <Content Include="Views\Home\HotArticles.cshtml" />
     <Content Include="Views\Home\NewComments.cshtml" />
     <Content Include="Views\Home\TagCloud.cshtml" />
+    <Content Include="Views\Archives\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
