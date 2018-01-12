@@ -12,6 +12,7 @@ namespace Sample.Web.Controllers
     public class ArchivesController : Controller
     {
         IArticleService _articleService = OperateHelper.Current._serviceSession.ArticleService;
+        ICommentService _commentService = OperateHelper.Current._serviceSession.CommentService;
 
         // GET: Archives
         public ActionResult Index(int id)
@@ -25,6 +26,10 @@ namespace Sample.Web.Controllers
                 keywords = article.Keywords.Split(' ');
             }
             ViewData["keywords"] = keywords;
+
+            //获取评论数
+            var count = _commentService.GetListBy(p => p.Status == 1 && p.CmtArtId == article.CategoryId).Count();
+            ViewBag.CmtCount = count;
 
             return View(article);
         }

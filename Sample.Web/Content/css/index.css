@@ -727,6 +727,16 @@ body.nav-fixed {
     text-align: center;
 }
 
+.article-meta {
+    font-size: 13px;
+    color: #999;
+    text-align: right;
+}
+
+.article-meta .item {
+    margin-right: 12px;
+}
+
 .article-content {
     font-size: 15px;
     line-height: 25px;

@@ -38,6 +38,15 @@
         @*正文信息*@
         @Html.Raw(Model.Contents)
     </article>
-    <div></div>
+    @*放上阅读、评论、赞等meata信息*@
+    <div class="article-meta">
+        <span class="item"><i>Posted@@</i>@Model.SubTime</span>
+        <span class="item">浏览（<a href="#">@Model.ViewCount</a>）</span>
+        <span class="item">评论（<a href="#">@ViewBag.CmtCount</a>）</span>
+        <span>
+            <img class="praisenum" src="/Content/images/ico_praise.png" />
+            （<a data-id="@this.Model.Id" praise-flag="0" href="#">@this.Model.Digg</a>）
+        </span>
+    </div>
     <div></div>
 </article>
