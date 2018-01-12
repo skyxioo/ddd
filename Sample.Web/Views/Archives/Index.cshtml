@@ -1,1 +1,43 @@
-﻿
+﻿@model Sample.Model.Article
+
+<article class="container well">
+    <div>
+        <i class="glyphicon glyphicon-home"></i>
+        <a title="首页" href="@Url.Action("Index", "Home", new { id = 0 })">首页</a> / 
+        <a title="@Model.Category.Name" href="@Url.Action("Index", "Home", new { id = Model.CategoryId })">@Model.Category.Name</a> / 
+    </div>
+    <header class="article-header">
+        <h1 class="article-title">@Model.Title</h1>
+        @{ 
+            var keywords = ViewData["keywords"] as Array;
+            if(keywords != null && keywords.Length > 0)
+            {
+                <div class="article-keyword">
+                    关键词：
+                    @foreach (var word in keywords)
+                    {
+                        <span class="item">@word</span>
+                    }
+                </div>
+            }
+        }
+    </header>
+    <article>
+        @*文章摘要，判断是否为空*@
+        @if(!string.IsNullOrEmpty(Model.Abstract))
+        {
+            <div class="alert alert-info">
+                摘要：@Model.Abstract
+            </div>
+        }
+        else
+        {
+            <hr style="margin:0px 0px 15px 0px" />
+        }
+
+        @*正文信息*@
+        @Html.Raw(Model.Contents)
+    </article>
+    <div></div>
+    <div></div>
+</article>
