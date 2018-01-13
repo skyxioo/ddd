@@ -1,5 +1,21 @@
 ﻿@model Sample.Model.Article
 
+@{ 
+    ViewBag.Title = Model.Title;
+}
+
+@section css{
+    <link href="/Content/css/dashang.css" rel="stylesheet" />
+}
+
+@section headScript{
+    <script type="text/javascript">
+        $(function () {
+            $('#home').addClass('active');
+        });
+    </script>
+}
+
 <article class="container well">
     <div>
         <i class="glyphicon glyphicon-home"></i>
@@ -43,10 +59,105 @@
         <span class="item"><i>Posted@@</i>@Model.SubTime</span>
         <span class="item">浏览（<a href="#">@Model.ViewCount</a>）</span>
         <span class="item">评论（<a href="#">@ViewBag.CmtCount</a>）</span>
-        <span>
+        <span class="item">
             <img class="praisenum" src="/Content/images/ico_praise.png" />
             （<a data-id="@this.Model.Id" praise-flag="0" href="#">@this.Model.Digg</a>）
         </span>
     </div>
-    <div></div>
+    <!-- 文章版权信息 -->
+    <div class="alert alert-success post-copyright">
+        <p>作者：奔跑的蜗牛</p>
+        <p>原文地址：<a>@Url.Content("http://www.lwtxt.com/Archives/Index/" + Model.Id.ToString())</a></p>
+        <p>版权归属：本文为博主原创或摘自互联网，转载时请以链接形式注明出处</p>
+    </div>
+    <!--前一篇、后一篇-->
+    @if(ViewBag.PreArticle != null && ViewBag.NextArticle != null)
+    {
+        <div class="article-pager clearfix">
+            <ul>
+                @if(ViewBag.PreArticle != null)
+                {
+                    var article = ViewBag.PreArticle as Sample.Model.ViewModel.ArticlePagedViewModel;
+                    <li>
+                        « 上一篇：<a href="@Url.Action("Index", "Archives", new { id = article.Id })">@article.Title</a>
+                    </li>
+                }
+                @if (ViewBag.NextArticle != null)
+                {
+                    var article = ViewBag.NextArticle as Sample.Model.ViewModel.ArticlePagedViewModel;
+                    <li>
+                        » 下一篇：<a href="@Url.Action("Index", "Archives", new { id = article.Id })">@article.Title</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+    <!-- 文章分享 -->
+    <div class="clearfix" id="bdshare">
+        <div class="bdsharebuttonbox " data-tag="share_1">
+            <a class="bds_qzone" data-cmd="qzone" href="#"></a>
+            <a class="bds_weixin" data-cmd="weixin"></a>
+            <a class="bds_tsina" data-cmd="tsina"></a>
+            <a class="bds_baidu" data-cmd="baidu"></a>
+            <a class="bds_douban" data-cmd="douban"></a>
+            <a class="bds_ty" data-cmd="ty"></a>
+
+            <a class="bds_kaixin001" data-cmd="kaixin001"></a>
+            <a class="bds_fbook" data-cmd="fbook"></a>
+            <a class="bds_twi" data-cmd="twi"></a>
+            <a class="bds_linkedin" data-cmd="linkedin"></a>
+            <a class="bds_more" data-cmd="more">更多</a>
+            <a class="bds_count" data-cmd="count"></a>
+        </div>
+    </div>
+    <script>
+        window._bd_share_config = {
+            common: {
+                bdText: '@ViewBag.Share',
+                bdDesc: '@this.Model.Abstract',
+                bdUrl: 'http://www.lwtxt.com/Archives/Index/@this.Model.Id',
+                bdSign: 'on', //是否进行回流统计。
+                bdMini: '2', //下拉浮层中分享按钮的列数
+                bdMiniList: false  //自定义下拉浮层中的分享按钮类型和排列顺序
+            },
+            share: [{
+                //此处放置分享按钮设置
+                "bdSize": 20
+            }],
+            slide: [{
+                bdImg: 0,
+                bdPos: "right",
+                bdTop: 100
+            }],
+            image: [{
+                //此处放置图片分享设置
+                viewType: 'list',
+                viewPos: 'top',
+                viewColor: 'black',
+                viewSize: '16',
+                viewList: ['qzone', 'tsina', 'weixin', 'tqq', 'douban']
+            }],
+            selectShare: [{
+                //此处放置划词分享设置
+                "bdselectMiniList": ['qzone', 'tqq', 'weixin', 'bdxc', 'tqf', 'tsina', 'douban']
+            }]
+        }
+        with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+    </script>
+    <!-- 文章分享结束 -->
 </article>
+
+<!--打赏-->
+<div style="margin-bottom:20px;">
+    <a title="打赏，支持一下" class="dashang" onclick="dashangToggle()" href="javascript:void(0);">
+
+    </a>
+</div>
+
+@section aside{
+    @{Html.RenderPartial("_CareForMe");}@*@加载分部视图（关注我）*@
+    @{Html.RenderAction("DocArchiving", "Home");}  @*加载分部视图（文章归档）*@
+    @{Html.RenderAction("HotArticles", "Home");}  @*加载分部视图（热门文章）*@
+    @{Html.RenderAction("NewComments", "Home");}  @*加载分部视图（最新评论）*@
+    @{Html.RenderPartial("~/Views/Home/TagCloud.cshtml");}@*加载分部视图（.标签云或友情链接）*@
+}

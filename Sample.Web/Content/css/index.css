@@ -737,6 +737,28 @@ body.nav-fixed {
     margin-right: 12px;
 }
 
+.post-copyright {
+    font-family: "Microsoft Yahei",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 1.42857;
+    margin-top: 5px;
+    padding: 8px;
+}
+
+.article-pager, .article-pager ul > li {
+    margin: 5px 0px;
+}
+
+.article-pager ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.article-pager li > a {    
+    border-bottom: 1px dotted #333;
+    color: #000;
+}
+
 .article-content {
     font-size: 15px;
     line-height: 25px;
@@ -1065,6 +1087,50 @@ margin-bottom: 10px;
 
 /* =========================== 小工具样式结束 =========================== */
 
+
+/* =========================== 颜色样式 =========================== */
+/*属性通配符selector.会在div容器内查找包含danger样式的任何元素并设置对应的样式*/
+div[class*="danger"] a {
+    color: #d9534f; /*西瓜红*/
+}
+
+div[class*="danger"] a:hover {
+    color: #b94a48;
+}
+
+div[class*="success"] a {
+    color: #5cb85c;
+}
+
+div[class*="success"] a:hover {
+    color: #468847;
+}
+
+div[class*="warning"] a {
+    color: #f0ad4e;
+}
+
+div[class*="warning"] a:hover {
+    color: #c09853;
+}
+
+div[class*="info"] a {
+    color: #5bc0de;
+}
+
+div[class*="info"] a:hover {
+    color: #3a87ad;
+}
+
+/* 限定徽章badge类颜色 */
+div[class*="danger"] .badge {
+    background-color: #d9534f;
+}
+
+div[class*="success"] .badge {
+    background-color: #5cb85c;
+}
+/* =========================== 颜色样式结束 =========================== */
 
 
 /* =========================== 页脚样式 =========================== */

@@ -19,7 +19,7 @@ namespace Sample.IBLL
         int UpdateBy(T model, Expression<Func<T, bool>> whereExp, params string[] propertyNames);
         T GetEntity(int id);
         IQueryable<T> GetListBy(Expression<Func<T, bool>> whereExp);
-        IQueryable<T> GetListBy<TKey>(Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp, bool isAsc);
+        IQueryable<T> GetListBy<TKey>(Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp, bool isAsc = true);
         List<T> GetPagedListBy<TKey>(int pageIndex, int pageSize, Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp, bool isAsc, out int count);
     }
 }

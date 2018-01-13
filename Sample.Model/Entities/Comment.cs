@@ -18,6 +18,7 @@ namespace Sample.Model
 
         [ForeignKey("CmtArtId")]
         public virtual Article Article { get; set; }
+        [ForeignKey("VisitorId")]
         public virtual Visitor Visitor { get; set; }
     }
 }

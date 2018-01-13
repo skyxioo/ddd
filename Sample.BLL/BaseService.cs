@@ -83,7 +83,7 @@ namespace Sample.BLL
         }
 
         public IQueryable<T> GetListBy<TKey>(Expression<Func<T, bool>> whereExp, Expression<Func<T, TKey>> orderExp,
-            bool isAsc)
+            bool isAsc = true)
         {
             return CurrentDAL.GetListBy(whereExp, orderExp, isAsc);
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sample.Model
 {
@@ -16,6 +17,7 @@ namespace Sample.Model
         public DateTime SubTime { get; set; }
         public DateTime? AltTime { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
+        [ForeignKey("VisitorIconId")]
         public virtual HeadIcon HeadIcon { get; set; }
         public virtual ICollection<LeaveMsg> LeaveMsgs { get; set; }
     }
