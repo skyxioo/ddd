@@ -731,6 +731,7 @@ body.nav-fixed {
     font-size: 13px;
     color: #999;
     text-align: right;
+    margin: 20px auto;
 }
 
 .article-meta .item {
@@ -905,20 +906,171 @@ body.nav-fixed {
 }
 
 .article-content blockquote {
-margin: 30px 30px;
-padding: 15px 20px 1px;
-font-size: 16px;
-color: #999;
-border-left: 5px solid #EEE;
+    margin: 30px 30px;
+    padding: 15px 20px 1px;
+    font-size: 16px;
+    color: #999;
+    border-left: 5px solid #EEE;
 }
 
 .article-content blockquote p {
-margin: 0;
-padding: 0;
-margin-bottom: 10px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
 }
 
 /* =========================== 主体样式结束 =========================== */
+
+
+
+/* =========================== 评论样式 =========================== */
+
+.comments-header {
+    text-align: center;
+    font-size: 14px;
+}
+
+#reply-title {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    overflow: auto;
+    color: #3a87ad;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 14px;
+}
+
+#reply-title a:hover {
+    color: white;
+}
+
+#reply-title #cancel-comment-reply-link {
+    padding: 2px 5px;
+    background-color: #d9534f;
+    color: white;
+    border-radius: 4px;
+}
+
+#commentform .input-group .input-group-addon {
+    background-color: #1abc9c;
+    color: #fff;
+    border: 1px solid #1abc9c;
+}
+
+#commentform .input-group .input-group-addon i {
+    width: 15px;
+}
+
+#commentform textarea {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: white;
+    border: 1px solid #c1c1c1;
+}
+
+#commentform input:focus,
+#commentform textarea:focus {
+    border: 1px solid #1abc9c;
+    outline: 0;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#commentform input.hiddeninput {
+    padding: 10px 25px;
+    background-color: transparent;
+    border: 2px solid #d9534f;
+}
+
+#commentform #submit {
+    margin-left: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    width: 100%;
+    color: #1abc9c;
+    font-size: 14px;
+    background-color: #eeeeee;
+    border: 1px solid #1abc9c;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#commentform #submit:hover {
+    color: white;
+    background-color: #1abc9c;
+    border: 1px solid #1abc9c;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    #commentform input {
+        padding: 10px 5px;
+    }
+}
+
+@media (max-width: 991px) {
+    #commentform input {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    #commentform input {
+        width: 100%;
+    }
+}
+
+#commentform .input-group label.error {
+    display: block;
+}
+
+#commentform label.error {
+    margin-right: 1px;
+    font-size: 12px;
+    color: #d9534f;
+    line-height: 35px;
+    margin-bottom: 0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: wobble-horizontal 1s ease-in-out;
+    animation: wobble-horizontal 1s ease-in-out;
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    #commentform label.error {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    #commentform label.error {
+        margin-right: 2px;
+    }
+}
+
+@media (max-width: 767px) {
+    #commentform label.error {
+        margin-right: 0;
+    }
+}
+
+/* =========================== 评论样式结束 =========================== */
 
 
 
